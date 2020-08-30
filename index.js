@@ -1,10 +1,12 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("");
-const api = require("");
+const generateMarkdown = require("./utils/generateMarkdown");
+// const api = require("");
 
 function userResponse() {
+  //BEGINNING OF FUNCTION
   return inquirer.prompt([
+    //BEGINNING OF PROMPTS
     {
       type: "input",
       message: "What is your GitHub username?",
@@ -61,5 +63,7 @@ function userResponse() {
       message: "What command is used to run a test?",
       name: "test",
     },
-  ]);
-}
+  ]); //END OF PROMPTS
+} //END OF FUNCTION
+
+userResponse();
