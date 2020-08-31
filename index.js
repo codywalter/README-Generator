@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
+// const generateMarkdown = require("./utils/generateMarkdown");
 // const api = require("");
 
 function userResponse() {
@@ -66,4 +67,23 @@ function userResponse() {
   ]); //END OF PROMPTS
 } //END OF FUNCTION
 
-userResponse();
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, "utf8", function (err) {
+    if (err) {
+      throw err;
+    }
+    console.log("You have successfully created a new file!");
+  });
+}
+
+async function init() {
+  try {
+    const answers = await userResponse();
+    generateMarkdown(answers);
+    writeToFile("README.md", generateMarkdown(answers));
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+init();

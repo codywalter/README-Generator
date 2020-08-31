@@ -28,7 +28,7 @@ function generateMarkdown(data) {
   ${data.contributer}
   ## Contact
   \n![Badge](${gitHub}) 
-  \n![Profile Image](${avatar})
+  \n![Profile Image](${image})
   \nView the project in GitHub at: ${data.url}
   \nIf you have any questions, contact the author directly at ${data.email}.`;
 }
