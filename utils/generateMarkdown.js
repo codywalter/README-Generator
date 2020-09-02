@@ -23,9 +23,9 @@ function generateMarkdown(data) {
   ## License
   ![Badge]${data.license}
   ## Tests
-  To test, run the following command: ${data.tests}
+  To test, run the following command: ${data.test}
   ## Contributors
-  ${data.contributer}
+  ${data.contributers}
   ## Contact
   \n![Badge](${gitHub}) 
   \n![Profile Image](${image})
