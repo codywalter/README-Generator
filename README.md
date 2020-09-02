@@ -25,7 +25,8 @@ None
 
 ## Tests
 
-To test, run the following command: node index.js/
+To test, run the following command: node index.js
+
 ![](./utils/README.gif)
 
 ## Contributors
