@@ -21,7 +21,7 @@ function generateMarkdown(data) {
   ## Usage
   Examples of how to use this program: ${data.usage}
   ## License
-  ${data.license}
+  ![Badge]${data.license}
   ## Tests
   To test, run the following command: ${data.tests}
   ## Contributors
